@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    // すでに書いてある設定の末尾に追記
+    'gemini' => [
+        'key' => env('GEMINI_API_KEY'),
+    ],
 ];

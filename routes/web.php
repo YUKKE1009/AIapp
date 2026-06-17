@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApplicantController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// ブラウザから簡単に確認できるように一時的に GET にしています
+Route::get('/applicant/analyze', [ApplicantController::class, 'analyze']);
