@@ -3,5 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApplicantController;
 
-// ブラウザから簡単に確認できるように一時的に GET にしています
-Route::get('/applicant/analyze', [ApplicantController::class, 'analyze']);
+// 1. 入力フォーム画面を開くURL (GET)
+Route::get('/applicant/form', [ApplicantController::class, 'index']);
+
+// 2. フォームの送信ボタンを押したときのURL (POST)
+Route::post('/applicant/analyze', [ApplicantController::class, 'analyze']);
